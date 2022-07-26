@@ -1,11 +1,32 @@
 import React from 'react';
 import './App.css';
+import Header from './Header';
+import SideBar from './SideBar';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Mail from './Mail';
+import EmailList from './EmailList';
+
 
 function App() {
   return (
-    <div className="App">
-      <h2>This is gmail clone</h2>
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+
+        <div className="app__body">
+          <SideBar />
+
+          <Switch>
+            <Route exact path='/mail'>
+              <Mail />
+            </Route>
+            <Route exact path="/">
+              <EmailList />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   )
 }
 
