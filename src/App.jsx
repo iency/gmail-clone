@@ -17,7 +17,7 @@ function App() {
           <SideBar />
 
           <Switch>
-            <Route exact path='/mail'>
+            <Route path='/mail'>
               <Mail />
             </Route>
             <Route exact path="/">

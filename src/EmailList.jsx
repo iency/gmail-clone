@@ -9,7 +9,10 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import KeyboardHideIcon from '@mui/icons-material/KeyboardHide';
 import SettingsIcon from '@mui/icons-material/Settings';
 import InboxIcon from '@mui/icons-material/Inbox';
+import PeopleIcon from '@mui/icons-material/People';
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import Section from './Section';
+import EmailRow from './EmailRow';
 
 const EmailList = () => {
   return (
@@ -44,7 +47,24 @@ const EmailList = () => {
       </div>
       
       <div className="emailList__sections">
-        <Section Icon={InboxIcon} title='primary' color="red" selected />
+        <Section Icon={InboxIcon} title='Primary' color="red" selected />
+        <Section Icon={PeopleIcon} title='Social' color="#1A73E8" />
+        <Section Icon={LocalOfferIcon} title='Promotions' color="green" />
+      </div>
+
+      <div className="emailList__list">
+        <EmailRow 
+          title="Twitch"
+          subject="Hey fellow streamer!!!"
+          description="This is test"
+          time="10pm"
+        />
+        <EmailRow 
+          title="Twitch"
+          subject="Hey fellow streamer!!!"
+          description="This is testThis is testThis is testThis is testThis is test"
+          time="10pm"
+        />
       </div>
     </div>
   );
